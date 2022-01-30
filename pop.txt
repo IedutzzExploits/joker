@@ -1,0 +1,146 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local KeyFrame = Instance.new("Frame")
+local Check = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+local TextButton = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local key = Instance.new("TextBox")
+local UICorner_3 = Instance.new("UICorner")
+local UICorner_4 = Instance.new("UICorner")
+local Title = Instance.new("TextLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+KeyFrame.Name = "KeyFrame"
+KeyFrame.Parent = ScreenGui
+KeyFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+KeyFrame.Position = UDim2.new(0.304136246, 0, 0.246679306, 0)
+KeyFrame.Size = UDim2.new(0, 201, 0, 239)
+KeyFrame.Active = true
+
+Check.Name = "Check"
+Check.Parent = KeyFrame
+Check.BackgroundColor3 = Color3.fromRGB(255, 60, 35)
+Check.Position = UDim2.new(0.223880604, 0, 0.673640192, 0)
+Check.Size = UDim2.new(0, 106, 0, 36)
+Check.Font = Enum.Font.Oswald
+Check.Text = "Submit"
+Check.TextColor3 = Color3.fromRGB(255, 255, 255)
+Check.TextScaled = true
+Check.TextSize = 47.000
+Check.TextWrapped = true
+
+UICorner.Parent = Check
+
+TextButton.Parent = KeyFrame
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 60, 35)
+TextButton.Position = UDim2.new(0.223880604, 0, 0.849372387, 0)
+TextButton.Size = UDim2.new(0, 106, 0, 36)
+TextButton.Font = Enum.Font.Oswald
+TextButton.Text = "Get Key"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextScaled = true
+TextButton.TextSize = 47.000
+TextButton.TextWrapped = true
+
+UICorner_2.Parent = TextButton
+
+key.Name = "key"
+key.Parent = KeyFrame
+key.BackgroundColor3 = Color3.fromRGB(104, 104, 104)
+key.BackgroundTransparency = 0.200
+key.Position = UDim2.new(0.074626863, 0, 0.26778242, 0)
+key.Size = UDim2.new(0, 176, 0, 39)
+key.Font = Enum.Font.Ubuntu
+key.Text = "Your Key Here..."
+key.TextColor3 = Color3.fromRGB(66, 66, 66)
+key.TextScaled = true
+key.TextSize = 14.000
+key.TextWrapped = true
+
+UICorner_3.Parent = key
+
+UICorner_4.Parent = KeyFrame
+
+Title.Name = "Title"
+Title.Parent = KeyFrame
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.Position = UDim2.new(-0.00464838883, 0, -0.000182594711, 0)
+Title.Size = UDim2.new(0, 200, 0, 27)
+Title.Font = Enum.Font.Ubuntu
+Title.Text = "Key System"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextWrapped = true
+
+-- Scripts:
+
+local function CDFFI_fake_script() -- Check.LocalScript 
+	local script = Instance.new('LocalScript', Check)
+
+	local key = script.Parent.Parent.key
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if key.Text == "9kmad4q39dnh3A22nf9NS0dcn39dhNkfkA" then -- Make the "Key" whatever you wish.
+game:GetService("StarterGui"):SetCore("SendNotification",{     
+
+Title = "Notification",     
+
+Text = "Thanks For Using Our Script",
+
+
+
+Duration = 10
+
+})
+game:GetService("StarterGui"):SetCore("SendNotification",{     
+
+Title = "Notification",     
+
+Text = "Fuck Da Hood Soldier",
+
+
+
+Duration = 10
+
+})
+loadstring(game:HttpGet("https://raw.githubusercontent.com/IedutzzExploits/jokerwarew/main/Protected%20(1).lua", true))()
+			script.Parent.Parent:TweenPosition(UDim2.new(0.383,0,-0.9,0), "Out", "Quad", 1, true)
+			script.Parent.Parent.Parent.Frame.Visible = true
+
+			wait(5)
+			script.Parent.Parent:Destroy() -- Destroys the GUI after a set time
+			print("Destroyed!")
+
+		elseif -- Tweening | If you want it to do a different tween just change the "Quad" to another tween animation
+			key.Text == "" then
+			key.Text = "" else
+			key.Text = "Incorrect, try again."
+            game:GetService("StarterGui"):SetCore("SendNotification",{     
+
+Title = "KeyNotification",     
+
+Text = "Find Key In Discord Server",
+
+
+
+Duration = 10
+
+})
+			wait(1)
+			key.Text = ""
+		end
+	end)
+	
+end
+coroutine.wrap(CDFFI_fake_script)()
